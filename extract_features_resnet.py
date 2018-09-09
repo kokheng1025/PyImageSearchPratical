@@ -14,10 +14,10 @@ import os
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-#ap.add_argument("-d", "--dataset", required=True,
-ap.add_argument("-d", "--dataset", type=str, default=".\\datasets\\kaggle_dogs_vs_cats\\train\\",  help="path to input dataset")
-#ap.add_argument("-o", "--output", required=True,
-ap.add_argument("-o", "--output", type=str, default=".\\datasets\\hdf5\\features_resnet_dogs_vs_cats.hdf5", help="path to output HDF5 file")
+ap.add_argument("-d", "--dataset", required=True, 
+    help="path to input dataset")
+ap.add_argument("-o", "--output", required=True, 
+    help="path to output HDF5 file")
 ap.add_argument("-b", "--batch-size", type=int, default=16, 
     help="batch size of images to be passed through network")
 ap.add_argument("-s", "--buffer-size", type=int, default=1000, 
