@@ -35,7 +35,7 @@ class CropPreprocessor:
         for (startX, startY, endX, endY) in coords:
             crop = image[startY:endY, startX:endX]
             crop = cv2.resize(crop, (self.width, self.height),
-                interpolcation=self.inter)
+                interpolation=self.inter)
             crops.append(crop)
 
         # check to see if the horizontal flips should be taken 
